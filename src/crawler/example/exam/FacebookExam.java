@@ -24,9 +24,9 @@ public class FacebookExam {
 		// 遠端資料路徑
 
 		String uri = 
-				"https://graph.facebook.com/v2.6"
-				+ "/search?q="
-				+ "&access_token=";
+				"https://graph.facebook.com/v2.2"
+				+ "/tvbsfb/feed?fileds=id,name,reactions.type(WOW).limit(0).summary(total_count),since=1480579915&until=1480752715"
+				+ "EAACEdEose0cBAMbQxYZCOKplOl2KP6kJ1MPatV0NkT6sH6zZCNdcC4qZA8Ii64ZC28T45KWo0v4RKJAk1bFcZAZBwFfKLkX5LohZBc9lZA04rKI4rbzzGDgsp4OB7B2CBP68nWwu5bQ8YlG6IRMTMVlS2xXZCofZAKfwbrX9mvUUwn4AZDZD";
 
 
 		Elements elems =
@@ -39,12 +39,16 @@ public class FacebookExam {
 		// 遂筆處理
 		for( Element data: elems ){
 			String id = data.select("id").text();
+			String name = data.select("name").text();
+
+
+
 
 			// FIXIT
 			String reactions = "";
 
 
-			output += id + "," + reactions + "\n";
+			output += name + "," + name + "\n";
 		}
 
 		System.out.println( output );
