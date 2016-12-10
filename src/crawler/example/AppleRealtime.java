@@ -59,8 +59,8 @@ public class AppleRealtime {
 //	                <h1><font color="#ff0000"> 【更新】好兆頭！　陽岱鋼單場第2安出爐(7234)</font></h1>
 //	            </a>
 //            </li>		
-
-			// 如果不想要更新的資料
+//
+			// 如果不   想要更新的資料
 			if ( news.select("h1 > font:matchesOwn(【更新】)").size() > 0 ) continue; 
 			
 			// 取出年月日時分
